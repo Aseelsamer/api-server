@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "display_name": "typicode",
+      "discription": "lalala"
+    },
+    [
+      {
+        "id": 1,
+        "name": "json-server",
+        "display_name": "typicode",
+        "discription": "lalala"
+      }
+    ]
+  ],
+  "products": [
+    [
+      {
+        "id": 1,
+        "name": "ffffff",
+        "display_name": "yyyyy",
+        "discription": "lalala"
+      }
+    ]
+  ]
+}
