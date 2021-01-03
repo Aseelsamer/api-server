@@ -4,7 +4,7 @@ Done by : Aseel Samer
 
 Links and Resources :
 [Swagger Documentation ](https://app.swaggerhub.com/apis/Aseelsamer/default-title/0.1)
-[Class-06]()
+[Class-06](https://github.com/Aseelsamer/api-server/pull/1)
 
 Packages :
 Json-server
