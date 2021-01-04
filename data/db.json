@@ -2,26 +2,18 @@
   "categories": [
     {
       "id": 1,
-      "name": "json-server",
-      "display_name": "typicode",
-      "discription": "lalala"
-    },
-    [
-      {
-        "id": 1,
-        "name": "json-server",
-        "display_name": "typicode",
-        "discription": "lalala"
-      }
-    ]
+      "name": "food1",
+      "display_name": "fast food",
+      "discription": "delicious"
+    }
   ],
   "products": [
     [
       {
-        "id": 1,
-        "name": "ffffff",
-        "display_name": "yyyyy",
-        "discription": "lalala"
+        "id": 2,
+        "name": "food2",
+        "display_name": "traditional food",
+        "discription": "yummy"
       }
     ]
   ]
