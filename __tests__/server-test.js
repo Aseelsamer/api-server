@@ -3,6 +3,9 @@
 const server = require('../lib/server');
 const supertest = require ('supertest');
 const mockrequest = supertest(server);
+const supergoose = require('@code-fellows/supergoose');
+const mockRequest1 = supergoose(server);
+
 
 describe('Tests',()=>{
     it('it can get ()',()=>{
@@ -12,13 +15,13 @@ describe('Tests',()=>{
     });
 
     it('it can get with Id ()',()=>{
-        return mockrequest
+        return mockrequest2
         .get('/:id')
         .then((result => expect(result.status).toBe(200)))
     });
 
     it('it should delete with Id ()',()=>{
-        return mockrequest
+        return mockrequest2
         .delete('/categories/:id')
         .then((result => expect(result.status).toBe(200)))
     });
@@ -36,7 +39,7 @@ describe('Tests',()=>{
             "display_name": "fast food",
             "discription": "delicious"
         };
-        return mockrequest
+        return mockrequest2
         .post('/categories')
         .send(record)
         .then(result=> {
@@ -50,7 +53,7 @@ describe('Tests',()=>{
             "display_name": "turkish food",
             "discription": "so yummy"
         };
-        return mockrequest
+        return mockrequest2
         .post('/product')
         .send(record)
         .then(result=> {
@@ -64,7 +67,7 @@ describe('Tests',()=>{
             "display_name": "turkish food",
             "discription": "so yummy"
         };
-        return mockrequest
+        return mockrequest2
         .put('/products/1')
         .send(record)
         .then(result=> {
@@ -78,7 +81,7 @@ describe('Tests',()=>{
             "display_name": "fast food",
             "discription": "delicious"
         };
-        return mockrequest
+        return mockrequest2
         .put('/categories/1')
         .send(record)
         .then(result=> {
