@@ -1,10 +1,11 @@
 'use strict';
+require('dotenv').config();
+
 const mongoose = require('mongoose');
 const server = require('./lib/server');
-require('dotenv').config();
 server.start();
 
-// const MONGODB_URI = 'mongodb://localhost:27017/lab8';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,

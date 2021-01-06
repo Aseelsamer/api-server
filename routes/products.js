@@ -2,64 +2,44 @@
 
 const express = require('express');
 const router = express.Router();
-const collecPro = require('../lib/products/products.collection');
+const collecPro = require('../lib/models/products/products-collection');
 
 
-router.get('/products',get());
-router.get('/products/:id',getById());
-router.delete('/products/:id', deleteFunc());
-router.post('/products',postFunc());
-router.put('/products/:id', putFunc());
-
-
-//create routes for categories and products
-let data = {
-    "products": [
-        [
-            {
-                "id": 1,
-                "name": "food3",
-                "display_name": "turkish food",
-                "discription": "so yummy"
-            },
-
-            {
-                "id": 2,
-                "name": "food4",
-                "display_name": "indian food",
-                "discription": "hot"
-            }
-        ]
-    ]
-};
+router.get('/products',get);
+router.get('/products/:id',getById);
+router.delete('/products/:id', deleteFunc);
+router.post('/products',postFunc);
+router.put('/products/:id', putFunc);
 
 
 
-function get(req,res){
-    collecPro.read()
+function get(req,res,next){
+    collecPro.get()
     .then(result=>{
         res.status(200).send(result)
 
     }).catch(next);
 }
 
-function getById(req,res){
-    collecPro.read(req.params.id)
+function getById(req,res,next){
+    let id = req.params.id;
+    collecPro.get(id)
     .then(result=>{
-        res.status(200).send(record);
+        res.status(200).send(result);
     }).catch(next);
    
 }
 
-function deleteFunc(req,res){
-    collecPro.delete(req.params.id)
+function deleteFunc(req,res,next){
+    let id = req.params.id;
+    collecPro.delete(id)
     .then(result=>{
         res.status(201).send(result);
     }).catch(next);
         }
 
 
-function postFunc (req, res) {
+function postFunc (req, res,next) {
     collecPro.create(req.body)
     .then(result=>{
         res.status(200).send(result);
@@ -67,9 +47,9 @@ function postFunc (req, res) {
 }
 
 
-
-function putFunc(req, res) {
-    collecPro.update(req.params.id,req.body)
+function putFunc(req, res,next) {
+    let id = req.params.id;
+    collecPro.update(id,req.body)
     .then(result=>{
         res.status(200).send(result);
         
