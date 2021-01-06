@@ -8,21 +8,22 @@
 ### Links and Resources
 
 [Swagger Documentation ](https://app.swaggerhub.com/apis/Aseelsamer/default-title/0.1)
-[Class-06](https://github.com/Aseelsamer/api-server/pull/1)
+[ClASS-06](https://github.com/Aseelsamer/api-server/pull/1)
+[CLASS-07](https://github.com/Aseelsamer/api-server/tree/class-07)
+[CLASS-08](https://github.com/Aseelsamer/api-server/tree/class-08)
+
 
 ### Setup
 
 
 #### How to initialize/run your application (where applicable)
 
-- e.g. `-Use json-server --watch data/db.json`
+- postman application by putting the routes
 
 #### How to use your library (where applicable)
 
 #### Tests
 How to intialize your application :
--Visit Swagger website and test the PUT,GET,POST & DELETE.
--Then get the documentation.
 -You can test it in Postman or Web Application.
 
 How to use your library :
@@ -30,4 +31,4 @@ How to use your library :
 it is used to run the code and take the links and test it .
 
 #### UML
-![GitHub Logo](/assests/uml 6.PNG)
+![GitHub Logo](/assests/uml final.PNG)
