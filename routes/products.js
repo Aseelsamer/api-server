@@ -12,7 +12,6 @@ router.post('/products',postFunc);
 router.put('/products/:id', putFunc);
 
 
-
 function get(req,res,next){
     collecPro.get()
     .then(result=>{
