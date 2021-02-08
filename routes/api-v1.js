@@ -4,7 +4,7 @@ const express =require('express');
 const products = require('../lib/models/products/products-collection');
 const category = require('../lib/models/categories/category-collection');
 const router = express.Router();
-
+const notes = require('../lib/models/notes/notes-collection')
 router.get('/api/v1/:model',getHandFun);
 router.get('/api/v1/:model',getHandFun);
 router.post('/api/v1/:model',postHandFun);
@@ -56,6 +56,10 @@ function getModel(req,res,next){
             req.model = products;
             next();
             break;
+        case "todo":
+            req.model=notes;
+            next();
+            break;  
         default: 
             next('Invalid');
             break;
